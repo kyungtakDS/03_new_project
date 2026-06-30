@@ -1,0 +1,11 @@
+{
+  "name": "food-roulette-kit",
+  "version": "1.0.0",
+  "description": "오늘 뭐 먹지? food-roulette 앱용 키트 — 코드리뷰 스킬, 코드리뷰 서브에이전트, 그리고 훅 3종(커밋 게이트 · JS 자동 린트 · 세션 불변식 안내).",
+  "author": {
+    "name": "kyungtakDS",
+    "email": "kinha2117@gmail.com"
+  },
+  "homepage": "https://github.com/kyungtakDS/03_new_project",
+  "keywords": ["code-review", "food-roulette", "hooks", "lint"]
+}

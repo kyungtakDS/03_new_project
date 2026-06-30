@@ -1,0 +1,19 @@
+{
+  "name": "food-roulette-marketplace",
+  "owner": {
+    "name": "kyungtakDS",
+    "email": "kinha2117@gmail.com"
+  },
+  "metadata": {
+    "description": "오늘 뭐 먹지? food-roulette 저장소가 제공하는 Claude Code 플러그인 마켓플레이스.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "food-roulette-kit",
+      "source": "./plugins/food-roulette-kit",
+      "description": "코드리뷰 스킬 + 코드리뷰 서브에이전트 + 훅 3종(커밋 게이트 · JS 자동 린트 · 세션 불변식 안내).",
+      "version": "1.0.0"
+    }
+  ]
+}
