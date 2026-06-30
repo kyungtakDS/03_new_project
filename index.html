@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오늘 뭐 먹지? 🍽️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="app-header">
+      <h1>오늘 뭐 먹지? <span aria-hidden="true">🍽️</span></h1>
+      <p class="subtitle">메뉴를 채우고 룰렛을 돌려보세요!</p>
+    </header>
+
+    <!-- 카테고리 프리셋 -->
+    <section class="presets" aria-label="카테고리 프리셋">
+      <button type="button" class="preset-btn" data-category="korean">한식</button>
+      <button type="button" class="preset-btn" data-category="chinese">중식</button>
+      <button type="button" class="preset-btn" data-category="japanese">일식</button>
+      <button type="button" class="preset-btn" data-category="western">양식</button>
+      <button type="button" class="preset-btn" data-category="snack">분식</button>
+      <button type="button" class="preset-btn" data-category="any">아무거나</button>
+    </section>
+
+    <!-- 메뉴 입력 -->
+    <section class="menu-input">
+      <form id="addForm" autocomplete="off">
+        <input
+          type="text"
+          id="menuInput"
+          placeholder="메뉴 직접 추가 (예: 마라탕)"
+          maxlength="20"
+          aria-label="메뉴 추가 입력"
+        />
+        <button type="submit" class="add-btn">추가</button>
+      </form>
+      <div class="chips" id="chips" aria-label="현재 메뉴 목록"></div>
+    </section>
+
+    <!-- 룰렛 -->
+    <section class="wheel-area">
+      <div class="pointer" aria-hidden="true">▼</div>
+      <canvas id="wheel" width="320" height="320" role="img" aria-label="음식 룰렛"></canvas>
+    </section>
+
+    <!-- 컨트롤 -->
+    <section class="controls">
+      <button type="button" id="spinBtn" class="spin-btn">돌리기 🎯</button>
+      <label class="sound-toggle">
+        <input type="checkbox" id="soundToggle" checked />
+        <span>효과음</span>
+      </label>
+    </section>
+
+    <!-- 결과 배너 -->
+    <section class="result hidden" id="result" aria-live="polite">
+      <p class="result-label">오늘의 선택은</p>
+      <p class="result-menu" id="resultMenu"></p>
+      <div class="result-actions">
+        <button type="button" id="respinBtn" class="ghost-btn">다시 돌리기</button>
+        <button type="button" id="findBtn" class="ghost-btn">근처 식당 찾기 🗺️</button>
+      </div>
+    </section>
+
+    <!-- 뽑기 기록 -->
+    <section class="history-area">
+      <div class="history-head">
+        <h2>뽑기 기록</h2>
+        <button type="button" id="clearHistoryBtn" class="link-btn">기록 지우기</button>
+      </div>
+      <ul class="history" id="history"></ul>
+    </section>
+  </main>
+
+  <canvas id="confetti" class="confetti-canvas" aria-hidden="true"></canvas>
+  <script src="lib/pointer.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
